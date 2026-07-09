@@ -37,7 +37,9 @@
     footer { margin-top: 40px; padding: 20px; font-size: 0.85em; color: #555; }
     details { background: #eee; padding: 15px; border-radius: 8px; }
     summary { cursor: pointer; font-weight: bold; color: var(--azul-oscuro); outline: none; }
-    .legal-text { font-size: 0.9em; line-height: 1.5; color: #333; }
+    /* Pequeño ajuste para que el texto nuevo se vea bien dentro del details */
+    .details-content { text-align: left; padding: 10px; font-size: 0.9em; }
+    .details-content p { margin: 8px 0; line-height: 1.4; }
 </style>
     
 </head>
@@ -61,8 +63,8 @@
    <footer>
     <details>
         <summary>Ver Términos y Condiciones</summary>
-        <div class="legal-text" style="text-align: left; padding: 10px;">
-            <p><strong>Vigencia:</strong> Del jueves 16 al domingo 19 de julio de 2026. Tras esta fecha, el cupón pierde validez de forma automática e irrevocable.</p>
+        <div class="details-content">
+            <p><strong>Vigencia:</strong> Del jueves 16 al domingo 19 de julio de 2026. Pasada esta fecha, el cupón pierde validez de forma automática e irrevocable.</p>
             <p><strong>Beneficio:</strong> (01) Ración de Pollo Entero Completo (peso ref. 2300g). Stock total: 300 pollos.</p>
             <p><strong>Lugar de Canje:</strong> Exclusivo en Tienda Larco (Trujillo).</p>
             <p><strong>Procedimiento:</strong> Es obligatorio presentar el cupón con numeración y mostrar DNI o fotocheck del titular. Se requiere firma de conformidad; el código quedará inhabilitado tras el canje.</p>
