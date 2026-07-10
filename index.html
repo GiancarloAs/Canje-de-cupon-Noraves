@@ -8,6 +8,7 @@ HTML
     <style>
         :root {
             --naranja: #ffa700;
+            --amarillo: #ffd300;
             --azul-claro: #0d11b5;
             --azul-oscuro: #060970;
             --blanco: #ffffff;
@@ -16,7 +17,9 @@ HTML
 
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f9f9f9; color: var(--negro); }
 
+        /* ESTILOS DEL BANNER RESPONSIVE */
         .banner-container { width: 100%; background: var(--azul-oscuro); text-align: center; }
+        
         .banner-desktop { width: 100%; max-width: 800px; display: block; margin: auto; }
         .banner-mobile { display: none; width: 100%; }
 
@@ -25,56 +28,50 @@ HTML
             .banner-mobile { display: block; }
         }
 
-        /* Contenedor principal y footer comparten el mismo ancho */
-        main, footer { 
-            padding: 20px; 
-            max-width: 600px; 
-            margin: auto; 
-        }
-
+        /* Resto de estilos */
+        main { padding: 20px; max-width: 600px; margin: auto; }
         h1 { color: var(--azul-oscuro); text-align: center; margin-top: 0; }
-        .card { background: var(--blanco); padding: 20px; border-radius: 12px; border: 2px solid var(--azul-claro); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card { background: var(--blanco); padding: 20px; margin-bottom: 20px; border-radius: 12px; border: 2px solid var(--azul-claro); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .card h2 { color: var(--naranja); margin-top: 0; }
         .btn-maps { display: block; background: var(--azul-claro); color: white; text-align: center; padding: 12px; margin-top: 15px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: background 0.3s; }
         .btn-maps:hover { background: var(--azul-oscuro); }
         
-        /* Ajuste de margen superior del footer */
-        footer { margin-top: -10px; padding-top: 0; font-size: 0.85em; color: #555; }
-        
+        /* AQUÍ ESTÁ EL AJUSTE: He cambiado margin-top a 10px (en lugar de 40px) */
+        footer { margin-top: 10px; padding: 20px; font-size: 0.85em; color: #555; }
         details { background: #eee; padding: 15px; border-radius: 8px; }
         summary { cursor: pointer; font-weight: bold; color: var(--azul-oscuro); outline: none; }
     </style>
 </head>
 <body>
 
-    <div class="banner-container">
+<div class="banner-container">
         <img src="carrusel1.png" alt="Banner Escritorio" class="banner-desktop">
         <img src="carrusel1mob.png" alt="Banner Celular" class="banner-mobile">
     </div>
 
     <main>
         <h1>Ubicación de Canje</h1>
-        <p style="text-align: center; margin-bottom: 20px;">Presenta tu vale en nuestra sede participante:</p>
+        <p style="text-align: center; margin-bottom: 30px;">Presenta tu vale en nuestra sede participante:</p>
 
         <div class="card">
             <h2>Tienda Av. Larco</h2>
             <p><strong>Dirección:</strong> Av. Víctor Larco Herrera Nº 1439, Urb. La Merced III Etapa </p>
             <a href="https://www.google.com/maps/search/?api=1&query=Noraves+Larco+Victor+Larco+Herrera" class="btn-maps" target="_blank">📍 Cómo llegar</a>
         </div>
+
+   <footer>
+    <details>
+        <summary>Ver Términos y Condiciones</summary>
+        <div style="text-align: left; padding: 10px;">
+            <p><strong>Vigencia:</strong> Del jueves 16 al domingo 19 de julio de 2026. Pasada esta fecha, el cupón pierde validez de forma automática e irrevocable.</p>
+            <p><strong>Beneficio:</strong> (01) Ración de Pollo Entero Completo (peso ref. 2300g). Stock total: 300 pollos.</p>
+            <p><strong>Lugar de Canje:</strong> Exclusivo en Tienda Larco (Trujillo).</p>
+            <p><strong>Procedimiento:</strong> Es obligatorio presentar el cupón con numeración y mostrar DNI o fotocheck del titular. Se requiere firma de conformidad; el código quedará inhabilitado tras el canje.</p>
+            <p><strong>Restricciones:</strong> Cupón personal e intransferible. Prohibida su venta, duplicación o uso indebido. No acumulable con otras promociones ni canjeable por dinero en efectivo.</p>
+            <p><small><em>* Imagen referencial.</em></small></p>
+        </div>
+    </details>
+</footer>
     </main>
-
-    <footer>
-        <details>
-            <summary>Ver Términos y Condiciones</summary>
-            <div style="text-align: left; padding: 10px;">
-                <p><strong>Vigencia:</strong> Del jueves 16 al domingo 19 de julio de 2026.</p>
-                <p><strong>Beneficio:</strong> (01) Ración de Pollo Entero Completo. Stock total: 300 pollos.</p>
-                <p><strong>Lugar de Canje:</strong> Exclusivo en Tienda Larco (Trujillo).</p>
-                <p><strong>Procedimiento:</strong> Presentar cupón con numeración y DNI o fotocheck del titular.</p>
-                <p><strong>Restricciones:</strong> Cupón personal e intransferible. No acumulable.</p>
-            </div>
-        </details>
-    </footer>
-
 </body>
 </html>
